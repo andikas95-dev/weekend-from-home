@@ -4,10 +4,16 @@
     background-color: #eebece;
 
     .bgImage {
-        min-height: 100vh;
-        background: url(../../Assets/image/bg-1.png) no-repeat center top;
-        object-fit: contain;
+        width: 100%;
+        background-image: url(../../Assets/image/bg-1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
+}
+
+.container-height {
+    height: 120vh;
 }
 
 h1.titleWeekend,
@@ -44,11 +50,20 @@ h6.motoWeekend {
         color: #000;
         border-radius: 30px;
         padding: 0.5rem 3.5rem;
-        bottom: 50px;
-        box-shadow: 20px 10px 20px #000;
+        box-shadow: 5px 5px 20px #000;
+        top: 75%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
 
         &:hover {
             background-color: rgb(233, 233, 233);
         }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .bgImage {
+        background-size: contain;
     }
 }

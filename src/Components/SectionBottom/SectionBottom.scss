@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.bottom-custom {
+    // width: 60% !important;
+}
+
+.bg-black {
+    background-color: #000;
+
+    .testi {
+        color: #fff;
+        font-family: 'Work Sans', sans-serif;
+        text-align: center;
+        font-weight: 900;
+        letter-spacing: 3px;
+    }
+}
+
+// .react-multi-carousel-item {
+//     width: 30rem !important;
+// }
+
+.carousel {
+    margin-top: -10rem;
+    padding-bottom: 8rem;
+    .testi {
+        margin-bottom: 50px;
+    }
+}
+
+.card {
+    // width: 50rem;
+    font-family: 'Work Sans', sans-serif;
+
+    h1.card-title {
+        font-weight: 900;
+        margin-bottom: 30px;
+    }
+    h5 {
+        text-align: justify;
+        font-weight: 600;
+    }
+}
