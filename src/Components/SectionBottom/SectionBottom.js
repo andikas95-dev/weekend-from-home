@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import Carousel from 'react-multi-carousel'
 import axios from 'axios'
+import { BsChevronRight } from 'react-icons/bs'
 import './SectionBottom.scss'
 import 'react-multi-carousel/lib/styles.css'
+import imgDoodle from '../../Assets/image/path-3.png'
+import imgDoodleBottom from '../../Assets/image/group-3.png'
 
 const SectionBottom = () => {
     const [carouselData, setCarouselData] = useState([])
@@ -98,54 +101,90 @@ const SectionBottom = () => {
                             })}
                     </Carousel>
                 </div>
-                <div className="pov my-5">
+                <div className="textDesc">
                     <h2 className="testi">POV</h2>
-                    <h5>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        ullamco laboris nisi ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur.
-                    </h5>
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-md-8">
+                            <h5>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud ullamco
+                                laboris nisi ea commodo consequat. Duis aute
+                                irure dolor in reprehenderit in voluptate velit
+                                esse cillum dolore eu fugiat nulla pariatur.
+                            </h5>
+                        </div>
+                    </div>
                 </div>
-                <div className="pov">
+                <div className="textDesc">
                     <h2 className="testi">Resource</h2>
-                    <h5>
-                        These cases are perfectly simple and easy to
-                        distinguish. In a free hour, when our power of choice is
-                        untrammelled and when nothing prevents our being able to
-                        do what we like best
-                    </h5>
-                </div>
-                <div className="helpTips">
-                    <h2 className="testi">Help & Tips</h2>
-                    <div className="row">
-                        {helpData &&
-                            helpData.map((item) => {
-                                return (
-                                    <div
-                                        className="col-12 col-md-4"
-                                        key={item.id}
-                                    >
-                                        <div className="card text-white">
-                                            <img
-                                                src={item.image}
-                                                className="card-img"
-                                                alt="..."
-                                            />
-                                            <div className="card-img-overlay">
-                                                <h5 className="card-title">
-                                                    Card title
-                                                </h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                )
-                            })}
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-md-8">
+                            <h5>
+                                These cases are perfectly simple and easy to
+                                distinguish. In a free hour, when our power of
+                                choice is untrammelled and when nothing prevents
+                                our being able to do what we like best.
+                            </h5>
+                        </div>
                     </div>
                 </div>
             </div>
+            <section className="bottomSet">
+                <img src={imgDoodle} className="imgDoodle" alt="" />
+                <img src={imgDoodleBottom} className="imgDoodleBottom" alt="" />
+                <div className="container">
+                    <div className="helpTips">
+                        <h2 className="testi">Help & Tips</h2>
+                        <div className="row">
+                            {helpData &&
+                                helpData.map((item) => {
+                                    return (
+                                        <div
+                                            className="col-12 col-md-4 my-1"
+                                            key={item.slug}
+                                        >
+                                            <div className="card text-white">
+                                                <img
+                                                    src={item.image}
+                                                    className="card-img"
+                                                    alt="..."
+                                                />
+                                                <div className="card-img-overlay img-overlay-custom">
+                                                    <div className="d-flex justify-content-between">
+                                                        <h6 className="card-title">
+                                                            {item.title}
+                                                        </h6>
+                                                        <div>
+                                                            <BsChevronRight
+                                                                style={{
+                                                                    color:
+                                                                        'tomato',
+                                                                }}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                        </div>
+                    </div>
+                    <div className="textDesc mb-0 pb-5">
+                        <h2 className="testi">You’re all set.</h2>
+                        <div className="row justify-content-center">
+                            <div className="col-12 col-md-8">
+                                <h5>
+                                    The wise man therefore always holds in these
+                                    matters to this principle of selection.
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     )
 }

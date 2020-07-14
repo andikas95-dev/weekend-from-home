@@ -22,13 +22,12 @@
 
 .carousel {
     margin-top: -10rem;
-    padding-bottom: 8rem;
     .testi {
         margin-bottom: 50px;
     }
 }
 
-.card {
+.card.card-body.h-100 {
     // width: 50rem;
     font-family: 'Work Sans', sans-serif;
 
@@ -39,5 +38,41 @@
     h5 {
         text-align: justify;
         font-weight: 600;
+    }
+}
+
+.textDesc {
+    margin: 5rem 0;
+
+    .row .col-12 h5 {
+        text-align: center;
+        color: #fff;
+        font-weight: normal;
+        margin-top: 20px;
+    }
+}
+
+.img-overlay-custom {
+    top: unset !important;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    width: 100%;
+
+    h6.card-title {
+        width: 10rem;
+    }
+}
+
+.bottomSet {
+    position: relative;
+
+    .imgDoodle {
+        position: absolute;
+        top: 0;
+        right: 30px;
+    }
+    .imgDoodleBottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
 }
