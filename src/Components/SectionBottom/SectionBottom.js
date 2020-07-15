@@ -6,6 +6,8 @@ import './SectionBottom.scss'
 import 'react-multi-carousel/lib/styles.css'
 import imgDoodle from '../../Assets/image/path-3.png'
 import imgDoodleBottom from '../../Assets/image/group-3.png'
+import imgDoodleBottom2 from '../../Assets/image/group-3@2x.png'
+import imgDoodleBottom3 from '../../Assets/image/group-3@3x.png'
 
 const SectionBottom = () => {
     const [carouselData, setCarouselData] = useState([])
@@ -133,7 +135,12 @@ const SectionBottom = () => {
             </div>
             <section className="bottomSet">
                 <img src={imgDoodle} className="imgDoodle" alt="" />
-                <img src={imgDoodleBottom} className="imgDoodleBottom" alt="" />
+                <img
+                    src={imgDoodleBottom}
+                    className="imgDoodleBottom"
+                    srcSet={`${imgDoodleBottom2} 300w, ${imgDoodleBottom3} 1000w`}
+                    alt="img-Bg-Bottom"
+                />
                 <div className="container">
                     <div className="helpTips">
                         <h2 className="testi">Help & Tips</h2>
@@ -178,6 +185,14 @@ const SectionBottom = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="doodleBottom">
+                    <img
+                        src={imgDoodleBottom}
+                        className="imgDoodleBottom-mobile"
+                        srcSet={`${imgDoodleBottom2} 300w, ${imgDoodleBottom3} 1000w`}
+                        alt="img-Bg-Bottom"
+                    />
                 </div>
             </section>
         </div>
