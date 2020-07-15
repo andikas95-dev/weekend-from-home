@@ -22,3 +22,36 @@
         }
     }
 }
+
+@media (min-width: 1820px) {
+    .header-custom {
+        img {
+            width: 5rem;
+        }
+
+        .titleHeader {
+            h6 {
+                font-size: 1.7rem;
+            }
+            h5 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+@media (min-width: 1499px) and (max-width: 1819px) {
+    .header-custom {
+        img {
+            width: 3rem;
+        }
+
+        .titleHeader {
+            h6 {
+                font-size: 1.3rem;
+            }
+            h5 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

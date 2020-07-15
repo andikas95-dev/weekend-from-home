@@ -36,7 +36,7 @@ const SectionBottom = () => {
     console.log(helpData)
     return (
         <div className="bg-black">
-            <div className="container bottom-custom">
+            <div className="container">
                 <div className="carousel">
                     <h2 className="testi">Testimonial</h2>
                     <Carousel
@@ -142,7 +142,7 @@ const SectionBottom = () => {
                                 helpData.map((item) => {
                                     return (
                                         <div
-                                            className="col-12 col-md-4 my-1"
+                                            className="col-12 col-md-4 col-sm-12  my-1"
                                             key={item.slug}
                                         >
                                             <div className="card text-white">
@@ -156,13 +156,8 @@ const SectionBottom = () => {
                                                         <h6 className="card-title">
                                                             {item.title}
                                                         </h6>
-                                                        <div>
-                                                            <BsChevronRight
-                                                                style={{
-                                                                    color:
-                                                                        'tomato',
-                                                                }}
-                                                            />
+                                                        <div className="cirleChevron">
+                                                            <BsChevronRight className="Chevron" />
                                                         </div>
                                                     </div>
                                                 </div>
